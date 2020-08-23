@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script> 
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyB4dRMk1crk8OhMejhD_u2FDIvnd0GPG78",
+          authDomain: "web-and-mobile-f85ac.firebaseapp.com",
+          databaseURL: "https://web-and-mobile-f85ac.firebaseio.com",
+          projectId: "web-and-mobile-f85ac",
+          storageBucket: "web-and-mobile-f85ac.appspot.com",
+          messagingSenderId: "1076092422613",
+          appId: "1:1076092422613:web:0fc47d795c7d89213a155c",
+          measurementId: "G-7MQTG88QLD"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+   
+      </script>
+
+</head>
+
+<body>
+        <div>
+            <input placeholder="ENTER TODO" type="text" id="todo-item">
+            <button onclick="addTodo()">ADD ITEM</i></button>
+            <button onclick=" deleteAll()">DELETE ALL</i></button>
+        </div>
+
+
+    <div>
+        <ul id="list">
+
+        </ul>
+    </div>
+    
+</body>
+<script src="app.js"></script>
+
+</html>
