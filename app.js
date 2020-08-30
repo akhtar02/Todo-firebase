@@ -20,9 +20,11 @@ firebase.database().ref('todos').on('child_added', function(data){
 
     var editBtn = document.createElement("button")
     var editText = document.createTextNode("EDIT")
-    editBtn.appendChild(editText)
+    
+    delBtn.setAttribute("class", "btn")
     editBtn.setAttribute('id', data.val().key)
     editBtn.setAttribute("onclick", "editItem(this)")
+    editBtn.appendChild(editText)
 
     li.appendChild(delBtn)
     li.appendChild(editBtn)
