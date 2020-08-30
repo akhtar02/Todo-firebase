@@ -1,37 +1,34 @@
-var list = document.getElementById("list");
+var list = document.getElementById("list")
 
-
-firebase.database().ref('todos').on('child_added', function(data){
-  // create li tag with text node
-    var li= document.createElement('li')
+firebase.database().ref('todos').on('child_added',function(data){
+   // console.log(data.val())
+//   // create li tag with text node
+    var li = document.createElement('li')
     var liText = document.createTextNode(data.val().value)
     li.appendChild(liText)
+    li.setAttribute('class' , 'text')
 
-
-    //create delete buttion
-    var delBtn = document.createElement("button")
-    var delText = document.createTextNode("DELETE")
-    delBtn.setAttribute("class", "btn")
+    //   //  create delete buttion
+    var delBtn = document.createElement('button')
+    var delText = document.createElement('i')
+    delBtn.setAttribute('class', 'icon3 fa fa-trash')
+    // delBtn.setAttribute('id', 'icon3')
     delBtn.setAttribute('id', data.val().key)
-    delBtn.setAttribute("onclick", "deleteItem(this)")
-    delBtn.appendChild(delText)
+    delBtn.setAttribute('onclick', 'deleteItem(this)')
 
-    // create edit buttion
-
-    var editBtn = document.createElement("button")
-    var editText = document.createTextNode("EDIT")
-    
-    delBtn.setAttribute("class", "btn")
-    editBtn.setAttribute('id', data.val().key)
-    editBtn.setAttribute("onclick", "editItem(this)")
-    editBtn.appendChild(editText)
-
-    li.appendChild(delBtn)
-    li.appendChild(editBtn)
-
-    list.appendChild(li)
-
+//   //  create Edit buttion
+    var editBtn = document.createElement('button')
+var editText= document.createElement('i')
+editBtn.setAttribute('class', 'icon4 fa fa-pencil-square-o')
+// editBtn.setAttribute('id', 'icon4')
+editBtn.appendChild(editText)
+editBtn.setAttribute('id',data.val().key)
+editBtn.setAttribute('onclick', 'editItem(this)')
+li.appendChild(delBtn)
+li.appendChild(editBtn)
+list.appendChild(li)
 })
+
     function addTodo() {
         var todo_item = document.getElementById("todo-item")
         var database = firebase.database().ref('todos')

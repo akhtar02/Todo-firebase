@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- Awesome links -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Firebase Todo App</title>
-
-     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+         <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script> 
 
     <script>
@@ -43,8 +45,8 @@
 
     <div class="main-card">
         <input placeholder="ENTER TODO" type="text" id="todo-item">
-        <button  class="btn btn-primary"onclick="addTodo()">ADD ITEM</i></button>
-        <button class="btn btn-primary" onclick=" deleteAll()">DELETE ALL</i></button>
+        <button  class="btn btn-primary  fa fa-plus"onclick="addTodo()"></i></button>
+        <button class="btn btn-primary fa fa-trash" onclick=" deleteAll()"></i></button>
     </div>
     
     </center>
@@ -54,9 +56,20 @@
 
         </ul>
     </div>
+
+    <footer>
+        <div class="footer-header">
+            <h3 class="text-center">Akhtar Hussain</h3>
+        </div>
+        <div class="footer-link">
+            <a href="http://facebook.com/akhtarhussain.official"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>
+            <a href="http://github.com/akhtar02"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            <a href="http://twitter.com/akhtarofficial"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </footer>
  
 </body>
-<script src="app.js"></script>
+<script src="js/app.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

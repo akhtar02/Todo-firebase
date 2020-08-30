@@ -60,8 +60,8 @@ input{
 }
 button{
     float: right;
-  =
 }
+
 
 li{
     text-decoration: none;
@@ -85,6 +85,56 @@ li{
     widows: 50%;
     border-radius: 15px;
     background-color: #d6cece;
-    box-shadow: 0px 5px 10px black
+    box-shadow: 0px 5px 10px black;
+    overflow: auto;
     
 }
+
+.icon3,.icon4{
+    border: none;
+    background-color:#5643c4;
+    position: relative;
+    right:10px;
+    color: #ffffff;
+    float: right;
+    font-size: 20px !important;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: none;
+    outline: none;
+    }
+
+.icon3{
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.icon4{
+    margin-right: 4px;
+    margin-top: 1px;
+}
+
+.fa-plus, .fa-trash{
+    font-size: 32px;
+}
+
+footer {
+    width: 100%;
+    background: #3d3b3b;
+    margin-top: 80px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .footer-header{
+      color: #ffffff;
+  }
+  .footer-link{
+      text-align: center;
+      color: #ffffff;
+  }
+  .fa-facebook-square, .fa-github, .fa-twitter-square{
+      margin-right: 10px;
+      color:#fff;
+  }
